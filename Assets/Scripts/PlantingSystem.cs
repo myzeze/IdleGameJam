@@ -18,7 +18,7 @@ public class PlantingSystem : MonoBehaviour
 
     private void Plant(GameObject plantPrefab)
     {
-        //instantiate the plantPrefab at the plantingArea's position and rotation
+        //instantiate the prefab at the areas position and rotation
         GameObject plant = Instantiate(plantPrefab, plantingArea.position, Quaternion.identity);
         // make list/array
 

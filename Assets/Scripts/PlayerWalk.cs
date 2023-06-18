@@ -16,19 +16,18 @@ public class PlayerWalk : MonoBehaviour
 
     void Update()
     {
+        //going forward
         float speed = Input.GetAxis("Vertical");
 
+        //rotation in regards to the a d keys
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
 
         Vector3 forward = transform.TransformDirection(Vector3.forward);
 
+        //WHAT
         CharacterController controller = GetComponent<CharacterController>();
         controller.SimpleMove(forward * speed * moveSpeed);
 
-        /*if (speed != 0)
-        {
-            Debug.Log(speed);
-        }*/
     }
 
 }

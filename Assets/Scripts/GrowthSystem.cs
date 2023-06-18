@@ -5,7 +5,7 @@ using UnityEngine;
 public class GrowthSystem : MonoBehaviour
 {
     [Header("Plant settings")]
-    // Time in seconds for each growth stage
+    // time in SECONDS for each growth stage
     public float growthTime = 60f; 
     public GameObject fullyGrownPlantPrefab;
 
@@ -26,10 +26,10 @@ public class GrowthSystem : MonoBehaviour
 
     private void IncrementGrowthStage()
     {
-        // Check if the growthStage is at the final stage
+        //check if the growthStage is at the final stage
         if (growthStage >= fullyGrownPlantPrefab.transform.childCount)
         {
-            // Plant is fully grown, do something (e.g., remove old plant and spawn rewards)
+            // plant is fully grown... do something ( remove old plant and spawn rewards)
             return;
         }
 
